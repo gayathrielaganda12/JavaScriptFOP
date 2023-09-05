@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question Page with Load More</title>
+  <!-- Link to Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Additional custom styles can be added here */
+    body {
+      padding: 20px;
+    }
+    #but{
+      background-color: aqua;
+      border-radius: 40px;
+    }
+  </style>
+</head>
+<div>
+    <div class="container">
+        <h1 class="mt-5">Frequently Asked Questions</h1>
+    <div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h6 class="mb-0">
+              1.  Write a function that returns an array containing only the unique ?<br><br>  
+
+              
+              Input:[1, 2, 2, 3, 4, 4, 5, 5, 6];<br>
+              <br>
+              Output:[1, 2, 3, 4, 5, 6];<br>
+              <br>
+
+              <button id="but"   class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                checkAnswer<br>
+              </button>
+            </h6>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+  
+                function findUniqueElements(arr) {<br>
+                  return Array.from(new Set(arr));<br>
+                }
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h6 class="mb-0">
+              2.  Write a function that flattens a nested array into a single array ?<br><br>  
+
+             
+              Input : [1, [2, [3, 4], 5], 6, [7]]<br><br>
+Output: [1, 2, 3, 4, 5, 6, 7]<br><br>
+
+              <button class="btn" id="but" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+             
+               checkAnswer<br>
+              </button>
+            </h6>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+  
+                function flattenArray(arr) {<br><br>
+                  return arr.flat(Infinity);<br>
+                } </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h6 class="mb-0">
+              3.  Write a function that removes all even numbers from an array of integers ?<br><br> 
+              Input : [1, 2, 3, 4, 5, 6, 7, 8]<br><br>
+Output: [1, 3, 5, 7] <br><br>
+              <button class="btn collapsed" id="but"   data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                
+checkAnswer<br> 
+              </button>
+            </h6>
+          </div>
+          <div id="collapse3" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+  
+                function removeEvenNumbers(arr) {<br>
+                  return arr.filter(num => num % 2 !== 0);<br>
+                }
+             </div>
+          </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+              <h6 class="mb-0">
+
+                4.  Write a function that calculates the average of numbers in a given array ?<br><br>
+                Input : [10, 20, 30, 40, 50]<br><br>
+Output: 30<br><br>
+
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                  
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse4" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+  
+                function calculateAverage(arr) {<br>
+                  const sum = arr.reduce((total, num) => total + num, 0);<br>
+                  return sum / arr.length;<br>
+                }
+            </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h6 class="mb-0">
+                5.  Write a function that sorts an array of objects based on a specified property ?<br><br>
+                Input : [<br>
+    { name: 'Alice', age: 30 },<br>
+    { name: 'Bob', age: 25 },<br>
+    { name: 'Charlie', age: 35 }<br>
+];<br><br>
+Output: [
+    { name: 'Bob', age: 25 },<br>
+    { name: 'Alice', age: 30 },<br>
+    { name: 'Charlie', age: 35 }<br>
+]<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                  checkAnswer<br>
+                </button>
+              </h6>
+            </div>
+            <div id="collapse5" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+  
+                function sortArrayOfObjects(arr, property) {<br>
+                  return arr.sort((a, b) => a[property] - b[property]);<br>
+                }
+             </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h6 class="mb-0">
+                6.  Write a function that counts the occurrences of each character in a given string ?<br><br>
+                Input : hello<br><br>
+Output: { h: 1, e: 1, l: 2, o: 1 }<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                  
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse6" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+  
+                function countCharacters(str) {<br>
+                  const charCount = {<br>};<br>
+                  for (const char of str) {<br>
+                    charCount[char] = (charCount[char] || 0) + 1;<br>
+                  }
+                  return charCount;<br>
+                }
+            </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h6 class="mb-0">
+                7.  Write a function that merges two sorted arrays into a single sorted array ?<br><br>
+                Input : sortedArray1 = [1, 3, 5, 7]<br>
+        sortedArray2 = [2, 4, 6, 8]<br>
+Output: [1, 2, 3, 4, 5, 6, 7, 8]<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                   
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse7" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+  
+                function mergeSortedArrays(arr1, arr2) {<br>
+                  let i = 0, j = 0;<br>
+                  const merged = [];<br>
+                  while (i < arr1.length && j < arr2.length) {<br>
+                    if (arr1[i] < arr2[j]) {<br>
+                      merged.push(arr1[i]);<br>
+                      i++;<br>
+                    } else {<br>
+                      merged.push(arr2[j]);<br>
+                      j++;<br>
+                    }
+                  }
+                  return merged.concat(arr1.slice(i), arr2.slice(j));<br>
+                }
+            </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h6 class="mb-0">
+                8.  Write a function that removes null and undefined values from an array ?<br><br> 
+                Input : [1, null, 2, undefined, 3, null, 4, 5]<br><br>
+Output: [1, 2, 3, 4, 5] <br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                  
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse8" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+              
+                <h6  style="font-weight: bold;">Solution:</h6>
+  
+                function removeNullUndefined(arr) {<br>
+                  return arr.filter(item => item !== null && item !== undefined);<br>
+                }
+            </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h6 class="mb-0">
+                9.  Write a function that calculates the result of raising a number to a given power ?<br><br>  
+                Input : base = 2;<br>
+                exponent = 3;<br><br>
+        Output: 8<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                  checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse9" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+  
+                function calculatePower(base, exponent) {<br>
+                  return Math.pow(base, exponent);<br>
+                }
+             </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h6 class="mb-0">
+                10. Write a function that finds the prime factors of a given number ?<br><br>  
+                Input : 56<br><br>
+                Output: [2,2,2,7]<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse10" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+  
+                function findPrimeFactors(number) {<br>
+                  const factors = [];<br>
+                  let divisor = 2;<br>
+                  while (number > 2) {<br>
+                    if (number % divisor === 0) {<br>
+                      factors.push(divisor);<br>
+                      number /= divisor;<br>
+                    } else {<br>
+                      divisor++;<br>
+                    }<br>
+                  }<br>
+                  return factors;<br>
+                }
+            </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h6 class="mb-0">
+                11. Write a function that generates a random password of a specified length ?<br><br>  
+
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse11" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+  
+                function generateRandomPassword(length) {<br>
+                  const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";<br>
+                  let password = "";<br>
+                  for (let i = 0;<br> i < length;<br> i++) {<br>
+                    const randomIndex = Math.floor(Math.random() * charset.length);<br>
+                    password += charset[randomIndex];<br>
+                  }<br>
+                  return password;<br>
+                }
+            </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h6 class="mb-0">
+                12. Write a function that checks whether a given string of brackets is balanced ?<br><br>  
+                Input : isBalanced("()");<br><br>
+                Output: true<br><br>
+                
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse12" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+  
+                function isBalancedBrackets(str) {<br>
+                  const stack = [];<br>
+                  const brackets = {<br>
+                    '(': ')',<br>
+                    '[': ']',<br>
+                    '{': '}'<br>
+                  };<br>
+                  for (const char of str) {<br>
+                    if (brackets[char]) {<br>
+                      stack.push(char);<br>
+                    } else if (char === ')' || char === ']' || char === '}') {<br>
+                      if (brackets[stack.pop()] !== char) {<br>
+                        return false;<br>
+                      }<br>
+                    }<br>
+                  }<br>
+                  return stack.length === 0;<br>
+                }
+             </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h6 class="mb-0">
+                13. Write a function that finds the first non-repeated character in a string ?<br><br>  
+                Input : abacddbeef<br><br>
+                Output: c<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse13" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+            
+<h6  style="font-weight: bold;">Solution:</h6>
+  
+function findFirstNonRepeatedChar(str) {<br>
+  const charCount = {<br>};<br>
+  for (const char of str) {<br>
+    charCount[char] = (charCount[char] || 0) + 1;<br>
+  }<br>
+  for (const char of str) {<br>
+    if (charCount[char] === 1) {<br>
+      return char;<br>
+    }<br>
+  }<br>
+  return null;<br>
+}  
+            </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h6 class="mb-0">
+                14. Write a function that truncates a string to a specified length and adds "..." at the end if needed ?<br><br>  
+                Input : "This is a long sentence that needs to be truncated."<br><br>
+                20<br>
+        Output: "This is a long sent..."<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse14" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+  
+                function truncateString(str, maxLength) {<br>
+                  if (str.length > maxLength) {<br>
+                    return str.slice(0, maxLength) + "...";<br>
+                  }<br>
+                  return str;<br>
+                }
+            </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h6 class="mb-0">
+                15. Write a function that calculates the greatest common divisor (GCD) of two numbers ?<br><br>  
+                Input : num1 = 48<br><br>
+                num2 = 18<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse15" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+             
+<h6  style="font-weight: bold;">Solution:</h6>
+  
+function calculateGCD(a, b) {<br>
+  while (b) {<br>
+    const temp = b;<br>
+    b = a % b;<br>
+    a = temp;<br>
+  }<br>
+  return a;<br>
+}
+ </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h6 class="mb-0">
+                16. Write a function that converts a binary number to its decimal equivalent ?<br><br>
+                Input : 101010 <br><br>
+Output: 42<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                  
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse16" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+  
+                function binaryToDecimal(binary) {<br>
+                  return parseInt(binary, 2);<br>
+                }
+                 </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h6 class="mb-0">
+                17. Write a function that converts a decimal number to its binary equivalent ?<br><br>  
+                Input : 42<br><br>
+                Output: 101010<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse17" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+  
+                function decimalToBinary(decimal) {<br>
+                  return decimal.toString(2);<br>
+                }
+            </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h6 class="mb-0">
+                18. Write a function that checks whether a given number is an Armstrong number<br><br>
+                Input : 153<br><br>
+                Output: 153 is an Armstrong number.<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse18" aria-expanded="false" aria-controls="collapse18">
+                  checkAnswer<br> </button>
+              </h6>
+            </div>
+            <div id="collapse18" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+  
+                function isArmstrongNumber(number) {<br>
+                  const numStr = number.toString();<br>
+                  const numDigits = numStr.length;<br>
+                  let sum = 0;<br>
+                  for (const digit of numStr) {<br>
+                    sum += Math.pow(parseInt(digit), numDigits);<br>
+                  }<br>
+                  return sum === number;<br>
+                }
+             </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h6 class="mb-0">
+                19. Write a function that calculates the least common multiple (LCM) of two numbers ?<br><br>  
+                Input : num1 = 12;<br>
+                num2 = 18;<br><br>
+        Output: 36<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse19" aria-expanded="false" aria-controls="collapse19">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse19" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+ 
+                function calculateLCM(a, b) {<br>
+                  return (a * b) ;<br>
+                 } 
+                 </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h6 class="mb-0">
+                20. Write a function that removes duplicate values from an array without using built-in functions ?<br><br>
+                Input : [1, 2, 2, 3, 4, 4, 5]<br><br>
+                Output: [1, 2, 3, 4, 5]<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse20" aria-expanded="false" aria-controls="collapse20">
+                  checkAnswer<br></button>
+              </h6>
+            </div>
+            <div id="collapse20" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+function removeDuplicates(arr) {<br>
+  const uniqueArr = [];<br>
+  for (const item of arr) {<br>
+    if (!uniqueArr.includes(item)) {<br>
+      uniqueArr.push(item);<br>
+    }<br>
+  }<br>
+  return uniqueArr;<br>
+}
+             </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+                21. Write a function that counts the number of words in a given sentence ?<br><br>  
+
+                Input : "Hello there, how are you doing?"<br><br>
+Output: 6<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse21" aria-expanded="false" aria-controls="collapse21">
+checkAnswer<br>  
+            </button>
+              </h6>
+            </div>
+            <div id="collapse21" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function countWords(sentence) {<br>
+                  const words = sentence.split(' ');<br>
+                  return words.length;<br>
+                }
+            </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+                22. Write a function that finds the maximum sum of a contiguous subarray in a given array ?<br><br>  
+                Input : [-2, 1, -3, 4, -1, 2, 1, -5, 4] <br><br>
+                Output: 6<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse22" aria-expanded="false" aria-controls="collapse22">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse22" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function maxSubarraySum(arr) {<br>
+                  let maxSum = arr[0];<br>
+                  let currentSum = arr[0];<br>
+                  for (let i = 1;<br> i < arr.length;<br> i++) {<br>
+                    currentSum = Math.max(arr[i], currentSum + arr[i]);<br>
+                    maxSum = Math.max(maxSum, currentSum);<br>
+                  }<br>
+                  return maxSum;<br>
+                }
+            </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+                23. Write a function that calculates the Nth Fibonacci number ?<br><br>  
+                Input : 10<br><br> 
+                Output: 55<br><br> 
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse23" aria-expanded="false" aria-controls="collapse23">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse23" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function fibonacciNth(n) {<br>
+                  if (n <= 1) {<br>
+                    return n;<br>
+                  }
+                  let a = 0, b = 1, temp;<br>
+                  for (let i = 2;<br> i <= n;<br> i++) {<br>
+                    temp = a + b;<br>
+                    a = b;<br>
+                    b = temp;<br>
+                  }<br>
+                  return b;<br>
+                }
+            </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+                24. Write a function that calculates the area of a triangle given its base and height ?<br><br>  
+                Input : base = 10;<br>
+                height = 5;<br><br>
+        Output: 25<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse24" aria-expanded="false" aria-controls="collapse24">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse24" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function calculateTriangleArea(base, height) {<br>
+                  return 0.5 * base * height;<br>
+                }
+             </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+                25. Write a function that checks whether a given year is a leap year ?<br><br>  
+                Input : 2022<br><br>
+                Output: false<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse25" aria-expanded="false" aria-controls="collapse25">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse25" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function isLeapYear(year) {<br>
+                  return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);<br>
+                }
+            </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+                26. Write a function that finds the median of two sorted arrays ?<br><br>  
+                Input : nums1 = [1, 3, 5];<br>
+                nums2 = [2, 4, 6];<br><br>
+        Output:  3.5<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse26" aria-expanded="false" aria-controls="collapse26">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse26" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function findMedianSortedArrays(nums1, nums2) {<br>
+                  const merged = [...nums1, ...nums2].sort((a, b) => a - b);<br>
+                  const midIndex = Math.floor(merged.length / 2);<br>
+                  if (merged.length % 2 === 0) {<br>
+                    return (merged[midIndex - 1] + merged[midIndex]) / 2;<br>
+                  } else {<br>
+                    return merged[midIndex];<br>
+                  }<br>
+                }
+            </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+                27.  Write a function that converts temperature from Celsius to Fahrenheit ?<br><br>  
+                Input : 25<br><br>
+                Output: 77<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse27" aria-expanded="false" aria-controls="collapse27">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse27" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function celsiusToFahrenheit(celsius) {<br>
+                  return (celsius * 9/5) + 32;<br>
+                }
+                  </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+                28. Write a function that converts temperature from Fahrenheit to Celsius ?<br><br>  
+                Input : 77<br><br>
+                Output: 25<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse28" aria-expanded="false" aria-controls="collapse28">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse28" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function fahrenheitToCelsius(fahrenheit) {<br>
+                  return (fahrenheit - 32) * 5/9;<br>
+                }
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+                29.  Write a function that reverses the digits of an integer ?<br><br>  
+                Input : 47<br><br> 
+                Output: 74<br><br> 
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse29" aria-expanded="false" aria-controls="collapse29">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse29" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function reverseInteger(number) {<br>
+                  const reversed = parseInt(number.toString().split('').reverse().join(''));<br>
+                  return reversed * Math.sign(number);<br>
+                }
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+                30. Write a function that checks whether a given number is a perfect number ?<br><br>  
+                Input : 28<br><br>
+                Output: true<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse30" aria-expanded="false" aria-controls="collapse30">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse30" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function isPerfectNumber(number) {<br>
+                  let sum = 0;<br>
+                  for (let i = 1; i <= number / 2; i++) {<br>
+                    if (number % i === 0) {<br>
+                      sum += i;
+                    }<br>
+                  }<br>
+                  return sum === number;<br>
+                }
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+                31. Write a function that reverses the elements of an array ?<br><br>  
+                Input : [1, 2, 3, 4, 5] <br><br>
+                Output: [5, 4, 3, 2, 1]<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse31" aria-expanded="false" aria-controls="collapse31">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse31" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function reverseArray(arr) {<br>
+                  const reversed = [];<br>
+                  for (let i = arr.length - 1; i >= 0; i--) {<br>
+                    reversed.push(arr[i]);<br>
+                  }<br>
+                  return reversed;<br>
+                }
+               </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+                32. Write a function that checks whether one array is a subset of another array ?<br><br>  
+                Input : array1 = [2, 4, 6]<br>
+                array2 = [1, 2, 3, 4, 5, 6];<br><br>
+                Output: true<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse32" aria-expanded="false" aria-controls="collapse32">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse32" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+              
+               <h6  style="font-weight: bold;">Solution:</h6>
+   
+function isSubset(arr1, arr2) {<br>
+  return arr2.every(item => arr1.includes(item));<br>
+}
+                </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+                33. Write a function that finds the longest palindromic substring in a given string ?<br><br>  
+                Input : babad<br><br>
+                Output: "bab" or "aba"<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse33" aria-expanded="false" aria-controls="collapse33">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse33" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function longestPalindromicSubstring(str) {<br>
+                  let longest = "";<br>
+                  for (let i = 0; i < str.length; i++) {<br>
+                    for (let j = i; j < str.length; j++) {<br>
+                      const substring = str.slice(i, j + 1);
+                      if (substring === substring.split('').reverse().join('') && substring.length > longest.length) {<br>
+                        longest = substring;<br>
+                      }<br>
+                    }<br>
+                  }<br>
+                  return longest;<br>
+                }
+               </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+                34. Write a recursive function that calculates the factorial of a given positive integer ?<br><br>  
+                Input : 5<br><br>
+                Output: 120<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse34" aria-expanded="false" aria-controls="collapse34">
+checkAnswer<br>  
+                </button>
+              </h6>
+            </div>
+            <div id="collapse34" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function factorialRecursive(n) {<br>
+                  if (n <= 1) {<br>
+                    return 1;<br>
+                  }<br>
+                  return n * factorialRecursive(n - 1);<br>
+                }
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+                35.  Write a function that finds the intersection of two arrays ?<br><br>  
+                Input : array1 = [1, 2, 3, 4, 5]<br>
+                array2 = [3, 4, 5, 6, 7]<br> <br>
+               Output: [3, 4, 5]<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse35" aria-expanded="false" aria-controls="collapse35">
+checkAnswer<br> 
+                </button>
+              </h6>
+            </div>
+            <div id="collapse35" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function findIntersection(arr1, arr2) {<br>
+                  return arr1.filter(item => arr2.includes(item));<br>
+                }
+    
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+               
+               36. Write a function that finds the longest common prefix among an array of strings ?<br><br>
+                Input : ["flower", "flow", "flight"]<br><br>
+                Output: fl<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse36" aria-expanded="false" aria-controls="collapse36">
+                  checkAnswer<br>
+                </button>
+              </h6>
+            </div>
+            <div id="collapse36" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function longestCommonPrefix(strs) {<br>
+                  if (strs.length === 0) {<br>
+                    return "";<br>
+                  }<br>
+                  let prefix = strs[0];<br>
+                  for (let i = 1; i < strs.length; i++) {<br>
+                    while (strs[i].indexOf(prefix) !== 0) {<br>
+                      prefix = prefix.slice(0, prefix.length - 1);<br>
+                      if (prefix === "") {<br>
+                        return "";<br>
+                      }<br>
+                    }<br>
+                  }<br>
+                  return prefix;<br>
+                }
+               </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+               37. Write a function that sorts an array of strings in lexicographical order ?<br><br>
+                Input : ["cherry","apple", "banana",  "date"]<br><br>
+Output: [ 'apple', 'banana', 'cherry', 'date' ]<br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse37" aria-expanded="false" aria-controls="collapse37">
+                  checkAnswer<br>
+                </button>
+              </h6>
+            </div>
+            <div id="collapse37" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function sortArrayStrings(arr) {<br>
+                  return arr.sort();<br>
+                }
+               </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+               38. Write a function that calculates the sum of all prime numbers less than a given number ? <br><br>
+                Input : 10<br><br>
+                Output: 17<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse38" aria-expanded="false" aria-controls="collapse38">
+                  checkAnswer<br>
+                </button>
+              </h6>
+            </div>
+            <div id="collapse38" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function sumOfPrimes(limit) {<br>
+                  let sum = 0;<br>
+                  for (let num = 2; num < limit; num++) {<br>
+                    if (isPrime(num)) {<br>
+                      sum += num;<br>
+                    }<br>
+                  }<br>
+                  return sum;<br>
+                }<br>
+                
+                function isPrime(number) {<br>
+                  if (number <= 1) {<br>
+                    return false;<br>
+                  }<br>
+                  for (let i = 2; i <= Math.sqrt(number); i++) {<br>
+                    if (number % i === 0) {<br>
+                      return false;<br>
+                    }<br>
+                  }<br>
+                  return true;<br>
+                }<br>
+               </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+               39. Write a function that finds the intersection of three arrays ? <br><br>
+Input : array1 = [1, 2, 3, 4, 5]<br>
+ array2 = [3, 4, 5, 6, 7]<br>
+ array3 = [5, 6, 7, 8, 9]<br><br>
+Output: [5]<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse39" aria-expanded="false" aria-controls="collapse39">
+                  checkAnswer<br>
+                </button>
+              </h6>
+            </div>
+            <div id="collapse39" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function findIntersectionThree(arr1, arr2, arr3) {<br>
+                  const intersection = arr1.filter(item => arr2.includes(item) && arr3.includes(item));<br>
+                  return intersection;<br>
+                }
+               </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+               40. Write a function that rotates a given matrix (2D array) by 90 degrees clockwise ? <br><br>
+Input : inputMatrix = [<br>
+  [1, 2, 3],<br>
+  [4, 5, 6],<br>
+  [7, 8, 9]<br>
+]<br><br>
+Output:<br>
+[ 7, 4, 1 ]<br>
+[ 8, 5, 2 ]<br>
+[ 9, 6, 3 ]<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse40" aria-expanded="false" aria-controls="collapse40">
+                  checkAnswer<br>
+                </button>
+              </h6>
+            </div>
+            <div id="collapse40" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function rotateMatrix(matrix) {<br>
+                  const n = matrix.length;<br>
+                  const rotated = [];<br>
+                  for (let i = 0; i < n; i++) {<br>
+                    rotated.push([]);<br>
+                    for (let j = 0; j < n; j++) {<br>
+                      rotated[i][j] = matrix[n - j - 1][i];<br>
+                    }<br>
+                  }<br>
+                  return rotated;<br>
+                } </div>
+            </div>
+          </div>
+         
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+               41. Write a function that counts the number of substrings in a binary string that have an equal number of 1s and 0s ?<br><br>
+Input : 10101<br><br>
+Output: 6<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse41" aria-expanded="false" aria-controls="collapse41">
+                  checkAnswer<br>
+                </button>
+              </h6>
+            </div>
+            <div id="collapse41" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function countEqualSubstrings(s) {<br>
+                  let count = 0;<br>
+                  for (let i = 0; i < s.length; i++) {<br>
+                    let ones = 0, zeros = 0;<br>
+                    for (let j = i; j < s.length; j++) {<br>
+                      if (s[j] === '1') {<br>
+                        ones++;<br>
+                      } else {<br>
+                        zeros++;<br>
+                      }<br>
+                      if (ones === zeros) {<br>
+                        count++;<br>
+                      }<br>
+                    }<br>
+                  }<br>
+                  return count;<br>
+                }
+               </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+               42. Implement your own version of the `map` function which applies a given function to each element of an array ? <br><br>
+Input : [1, 2, 3, 4, 5]<br><br>
+Output: [2, 4, 6, 8, 10]<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse42" aria-expanded="false" aria-controls="collapse42">
+                  checkAnswer<br>
+                </button>
+              </h6>
+            </div>
+            <div id="collapse42" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function customMap(arr, callback) {<br>
+                  const result = [];<br>
+                  for (const item of arr) {<br>
+                    result.push(callback(item));<br>
+                  }<br>
+                  return result;<br>
+                }<br>
+                   </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+               43. Implement your own version of the `filter` function which filters elements of an array based on a given condition ?<br><br>
+
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse43" aria-expanded="false" aria-controls="collapse43">
+                  checkAnswer<br>
+                </button>
+              </h6>
+            </div>
+            <div id="collapse43" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function customFilter(arr, callback) {<br>
+                  const result = [];<br>
+                  for (const item of arr) {<br>
+                    if (callback(item)) {<br>
+                      result.push(item);<br>
+                    }<br>
+                  }<br>
+                  return result;<br>
+                }
+               </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+               44. Implement your own version of the `reduce` function which accumulates values of an array using a given reducer function ?<br><br>
+Input : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]<br><br>
+Output: [2, 4, 6, 8, 10]<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse44" aria-expanded="false" aria-controls="collapse44">
+                  checkAnswer<br>
+                </button>
+              </h6>
+            </div>
+            <div id="collapse44" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function customReduce(arr, reducer, initialValue) {<br>
+                  let accumulator = initialValue !== undefined ? initialValue : arr[0];<br>
+                  for (let i = initialValue !== undefined ? 0 : 1; i < arr.length; i++) {<br>
+                    accumulator = reducer(accumulator, arr[i]);<br>
+                  }<br>
+                  return accumulator;<br>
+                } </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+               45. Write a function that finds the shortest distance between two words in a given list of words ? <br><br>
+Input : wordList = ["apple", "banana", "cherry", "apple", "date", "banana", "apple"]<br> 
+         targetWord1 = "apple"<br>
+         targetWord2 = "banana"<br><br>
+Output: Shortest distance between 'apple' and 'banana' is 1<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse45" aria-expanded="false" aria-controls="collapse45">
+                  checkAnswer<br>
+                </button>
+              </h6>
+            </div>
+            <div id="collapse45" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function shortestWordDistance(words, word1, word2) {<br>
+                  let minDistance = Infinity;<br>
+                  let index1 = -1, index2 = -1;<br>
+                  
+                  for (let i = 0; i < words.length; i++) {<br>
+                    if (words[i] === word1) {<br>
+                      index1 = i;<br>
+                      if (index2 !== -1) {<br>
+                        minDistance = Math.min(minDistance, Math.abs(index1 - index2));<br>
+                      }<br>
+                    } else if (words[i] === word2) {<br>
+                      index2 = i;<br>
+                      if (index1 !== -1) {<br>
+                        minDistance = Math.min(minDistance, Math.abs(index1 - index2));<br>
+                      }<br>
+                    }<br>
+                  }<br>
+                  
+                  return minDistance;<br>
+                }
+                   </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+               46. Implement a stack data structure with `push`, `pop`, and `peek` methods ?<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse46" aria-expanded="false" aria-controls="collapse46">
+                  checkAnswer<br>
+                </button>
+              </h6>
+            </div>
+            <div id="collapse46" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                class Stack {<br>
+                  constructor() {<br>
+                    this.items = [];<br>
+                  }<br>
+                
+                  push(item) {<br>
+                    this.items.push(item);<br>
+                  }<br>
+                
+                  pop() {<br>
+                    return this.items.pop();<br>
+                  }<br>
+                
+                  peek() {<br>
+                    return this.items[this.items.length - 1];<br>
+                  }<br>
+                }
+               </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+               47. Implement a queue data structure with `enqueue`, `dequeue`, and `peek` methods ? <br><br>
+
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse47" aria-expanded="false" aria-controls="collapse47">
+                  checkAnswer<br>
+                </button>
+              </h6>
+            </div>
+            <div id="collapse47" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+              <h6  style="font-weight: bold;">Solution:</h6>
+   
+class Queue {<br>
+  constructor() {<br>
+    this.items = [];<br>
+  }<br>
+
+  enqueue(item) {<br>
+    this.items.push(item);<br>
+  }<br>
+
+  dequeue() {<br>
+    return this.items.shift();<br>
+  }<br>
+
+  peek() {<br>
+    return this.items[0];<br>
+  }<br>
+} </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+               48. Implement a binary search algorithm to find the index of a target element in a sorted array ?<br><br>
+Input : [2, 5, 8, 12, 16, 23, 38, 45, 56, 72, 91]<br>
+        23<br><br>
+Output: 5<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse48" aria-expanded="false" aria-controls="collapse48">
+                  checkAnswer<br>
+                </button>
+              </h6>
+            </div>
+            <div id="collapse48" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function binarySearch(arr, target) {<br>
+                  let left = 0;<br>
+                  let right = arr.length - 1;<br>
+                  
+                  while (left <= right) {<br>
+                    const mid = Math.floor((left + right) / 2);<br>
+                    
+                    if (arr[mid] === target) {<br>
+                      return mid;<br>
+                    } else if (arr[mid] < target) {<br>
+                      left = mid + 1;<br>
+                    } else {<br>
+                      right = mid - 1;<br>
+                    }<br>
+                  }<br>
+                  
+                  return -1;<br>
+                }
+  
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+               49. Implement the bubble sort algorithm to sort an array ?<br><br>
+Input : [64, 34, 25, 12, 22, 11, 90]<br><br>
+Output: [11, 12, 22, 25, 34, 64, 90]<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse49" aria-expanded="false" aria-controls="collapse49">
+                  checkAnswer<br>
+                </button>
+              </h6>
+            </div>
+            <div id="collapse49" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   
+                function bubbleSort(arr) {<br>
+                  const n = arr.length;<br>
+                  for (let i = 0; i < n - 1; i++) {<br>
+                    for (let j = 0; j < n - i - 1; j++) {<br>
+                      if (arr[j] > arr[j + 1]) {<br>
+                        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];<br>
+                      }<br>
+                    }<br>
+                  }<br>
+                  return arr;<br>
+                } </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h6 class="mb-0">
+               50. Implement the insertion sort algorithm to sort an array ?<br><br>
+Input : [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]<br><br>
+Output:  [1, 1, 2, 3, 3,4, 5, 5, 5, 6,9]<br><br>
+                <button class="btn collapsed" id="but"  data-toggle="collapse" data-target="#collapse50" aria-expanded="false" aria-controls="collapse50">
+                  checkAnswer<br>
+                </button>
+              </h6>
+            </div>
+            <div id="collapse50" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <h6  style="font-weight: bold;">Solution:</h6>
+   function insertionSort(arr) {<br>
+                  for (let i = 1; i < arr.length; i++) {<br>
+                    let currentElement = arr[i];<br>
+                    let j = i - 1;<br>
+                
+                    while (j >= 0 && arr[j] > currentElement) {<br>
+                      arr[j + 1] = arr[j];<br>
+                      j--;<br>
+                    }<br>
+                
+                    arr[j + 1] = currentElement;<br>
+                  }<br>
+                } </div>
+            </div>
+          </div>
+      </div>
+    
+    <!-- <button class="btn btn-primary mt-3" id="loadMoreBtn">Load More</button> -->
+  </div>
+</div>
+  <!-- Link to Bootstrap JS (optional, for certain Bootstrap features) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- <script>
+    $(document).ready(function() {
+      // Array of additional questions
+      var additionalQuestions = [
+        "What are the benefits of using HTML and CSS for web development?<br><br>  
+checkAnswer<br> ",
+        "Where can I learn more about web development?<br><br>  
+checkAnswer<br> ",
+        "Is JavaScript necessary for web development?<br><br>  
+checkAnswer<br> "
+      ];
+
+      var questionList = $("#questionList");
+      var loadMoreBtn = $("#loadMoreBtn");
+      var questionsToShow = 3;
+      
+      // Function to load more questions
+      function loadMoreQuestions() {
+        for (var i = 0; i < questionsToShow; i++) {
+          if (additionalQuestions.length > 0) {
+            var question = additionalQuestions.shift();
+            questionList.append('<li class="list-group-item">' + question + '</li>');
+          } else {
+            loadMoreBtn.hide();
+            break;
+          }
+        }
+      }
+      
+      // Load more questions on button click
+      loadMoreBtn.click(function() {
+        loadMoreQuestions();
+      });
+    });
+  </script> -->
+</body>
+</html>
